@@ -2,6 +2,8 @@
 
 Personal portfolio site for [Andrew Chang](https://github.com/anderooc).
 
+**Live site:** [anderooc.github.io](https://anderooc.github.io)
+
 ## Local preview
 
 Open `index.html` in a browser, or serve locally:
