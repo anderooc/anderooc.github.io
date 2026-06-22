@@ -1,156 +1,172 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Andrew Chang</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Chang — software engineer at Bank of America.">
+  <title>Andrew Chang</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
+<body>
+  <header class="site-header">
+    <a href="#" class="logo" data-scroll-top>Andrew Chang</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#" data-scroll-top>About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-    <!-- Main -->
-    <div id="main">
-        <div class="inner">
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h1>Hi, I'm Andrew!</h1>
+        <p class="lead">
+          I am a Emory Computer Science alumni currently working as a software engineer at Bank of America. In my free time
+          I like to build projects that stem from my interests and hobbies. Currently working on pool-play-one.vercel.app
+        </p>
+        <div class="hero-links">
+          <a href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:andrew.chang.sd@gmail.com">Email</a>
+        </div>
+      </div>
+      <img src="images/Chang.Andrew.jpg" alt="Andrew Chang" class="headshot">
+    </section>
 
-            <!-- Header -->
-            <div class="navbar" id="header">
-                <a href="#" class="logo"><strong>Andrew Chang</strong> </a>
-                <ul class="icons">
-                    <li><a href="https://linkedin.com/in/andrewchangsd" class="icon brands fa-linkedin"><span
-                            class="label">Linkedin</span></a></li>
-                    <li><a href="https://github.com/anderooc" class="icon brands fa-github"><span
-                            class="label">Github</span></a></li>
-                    <li><a href="mailto:andrew.chang.sd@gmail.com" class="icon solid fa-envelope"><span
-                            class="label">Email</span></a></li>
-                </ul>
+    <section class="projects" id="projects">
+      <h2>Projects I've worked on</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image">
+              <img src="images/poolplay.png" alt="PoolPlay">
             </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">Next.js · React · TypeScript · Supabase · PostgreSQL · Drizzle ORM</p>
+            <h3><a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer">PoolPlay</a></h3>
+            <p class="card-desc">
+              Tournament platform for collegiate club volleyball. Inspired from my own experience as club president scheduling and managing tournaments
+              across spreadsheets, social media platforms, and payment platforms. PoolPlay handles registration, pool draws,
+              brackets, court scheduling, and live scoring in one consolidated platform.
+            </p>
+            <a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
 
-            <!-- Banner -->
-            <section id="banner">
-                <div class="content">
-                    <header>
-                        <h1>Hi, I’m Andrew</h1>
-                        <p>A Computer Science Student at Emory University</p>
-                    </header>
-                    <p>I'm a curious full-stack developer with experience in fields ranging from machine learning to
-                        database systems to computer vision and to web development.</p>
-                    <ul class="actions">
-                        <li><a href="mailto:andrew.chang.sd@gmail.com" class="button big">Contact Me</a></li>
-                    </ul>
-                </div>
-            </section>
+        <article class="project-card">
+          <a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image card-image--contain">
+              <img src="images/pomodoro.png?v=2" alt="Pomodoro+">
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">React · Flask · PostgreSQL · AWS</p>
+            <h3><a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Pomodoro+</a></h3>
+            <p class="card-desc">
+              Consolidated study tool with Pomodoro timers, shared study sessions, and a Chrome extension
+              to block distracting sites.
+            </p>
+            <a href="https://github.com/raphaelpalacio/CS370Project" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image">
+              <img src="images/llm-refusal.png" alt="LLM Refusal Signal">
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">Python · Ollama · NLP</p>
+            <h3><a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer">LLM Refusal Signal</a></h3>
+            <p class="card-desc">
+              Research project examining whether open-weight LLMs would inadverdently leak hidden rule sets in their refusal messages.
+            </p>
+            <a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image card-image--contain">
+              <img src="images/nbaBetting.png" alt="NBA Category Heatmap">
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">Python · Kaggle · scikit-learn</p>
+            <h3><a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">NBA ML Player Prediction</a></h3>
+            <p class="card-desc">
+              ML project with the end goal of beating the house on NBA player prop bets. Compared performance of neural
+              nets, linear regression, and k-NN models trained on 25 years of historal NBA data pulled from Kaggle. 
+            </p>
+            <a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image">
+              <img src="images/stockPriceEx.png" alt="Stock Price Predictor">
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">Python · scikit-learn</p>
+            <h3><a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Stock Price Predictor</a></h3>
+            <p class="card-desc">
+              This stock price predictor was a machine learning research project under the mentorship of CMU
+              professor Vipul Goyal. Trained over historical stock data, the model predicts future closing prices. Stock history is called from Alpha Vantage API.
+            </p>
+            <a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
 
 
-            <!-- Section -->
-            <section>
-                <header class="major" id="projects">
-                    <h2>Past Projects</h2>
-                </header>
-                <div class="posts">
-                    <article>
-                        <a href="https://github.com/anderooc/stock-price-prediction" class="image"><img
-                                src="images/stockPriceEx.png" alt=""/></a>
-                        <h3>Stock Price Predictor</h3>
-                        <p>The stock price predictor was a machine learning research project under the mentorship of CMU
-                            professor Vipul Goyal.
-                            Trained over historical stock data, the model predicts future closing prices.
-                            This project uses Python, SK-Learn, Matplot, NumPy, and Pandas.
-                            Stock history is called from Alpha Vantage API.</p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/stock-price-prediction" class="button">More</a>
-                            </li>
-                        </ul>
-                    </article>
-                    <article>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <a href="https://github.com/anderooc/barcode-scanner" class="image"><img
-                                src="images/barcode.png" width="48px" height="200px" alt=""/></a>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <h3>Barcode Scanner</h3>
-                        <p>Program searches images for barcodes in gradient representation, then displays them with a bounding box. Built using Python
-                            and OpenCV.</p>
-                        <br/>
-                        <br/>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/barcode-scanner" class="button">More</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <a href="https://github.com/anderooc/dogbreed-model" class="image"><img
-                                src="images/stanfordDogsDataset.jpeg" alt=""/></a>
-                        <h3>Dog Breed Classification</h3>
-                        <p>Trained over Stanford Dogs Dataset, this model classifies pictures into 120 separate dog breeds.
-                            Uses Python, TensorFlow, MatPlot, and NumPy.</p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/dogbreed-model" class="button">More</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <a href="https://github.com/anderooc/mock-school-website" class="image"><img
-                                src="images/schoolWebsite.png" alt=""/></a>
-                        <h3>Mock School Website</h3>
-                        <p>Mock school website with student and teacher accounts.
-                            Functional database to hold accounts and assignments.
-                            Django used for backend management, basic HTML for front site.</p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/mock-school-website" class="button">More</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <a href="https://github.com/anderooc/cooking-website" class="image"><img
-                                src="images/cookingWebsite.png" alt=""/></a>
-                        <h3>Cooking Website</h3>
-                        <p>Cooking recipe website project focused on frontend development. Uses HTML, CSS, and BootStrap. </p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/cooking-website" class="button">More</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <a href="https://github.com/anderooc/pong" class="image"><img src="images/pong.png" alt=""/></a>
-                        <h3>Pong</h3>
-                        <p>Recreated classic pong game with JavaScript, with a simple AI for the opponent.</p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/anderooc/pong" class="button">More</a></li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
+        <article class="project-card">
+          <a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer" class="card-image-link">
+            <div class="card-image card-image--contain">
+              <img src="images/barcode.png" alt="Barcode Scanner">
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="card-meta">Python · OpenCV</p>
+            <h3><a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer">Barcode Scanner</a></h3>
+            <p class="card-desc">
+              Finds barcodes in images by analyzing gradient representations, then draws a
+              bounding box around each one.
+            </p>
+            <a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+          </div>
+        </article>
 
-        </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Sidebar -->
-    <div id="sidebar" hidden>
-        <div class="inner">
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
-                <ul>
-                    <li><a href="#banner">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <section class="contact" id="contact">
+      <h2>Say hi!</h2>
+      <p>Feel free to reach out about anything.</p>
+      <div class="hero-links">
+        <a href="mailto:andrew.chang.sd@gmail.com">Email</a>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <footer class="site-footer">
+    <a href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </footer>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
