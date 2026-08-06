@@ -834,6 +834,87 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 
+
+/* ---------- Interests ---------- */
+
+.interests {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.75rem, 4vw, 2.5rem) 0 0;
+}
+
+.interest {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in oklch, var(--paper) 72%, white);
+  transition: border-color 0.3s var(--ease-out-quart),
+              transform 0.45s var(--ease-out-quint),
+              box-shadow 0.45s var(--ease-out-quart);
+}
+
+.interest:hover {
+  border-color: oklch(0.80 0.02 258);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -24px oklch(0.20 0.035 258 / 0.4);
+}
+
+.interest-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 92;
+  color: var(--signal-ink);
+}
+
+.interest h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 108;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.interest-desc {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.interest--stat {
+  background: var(--ink-deep);
+  border-color: transparent;
+  color: var(--on-ink-muted);
+}
+
+.interest--stat .interest-label { color: var(--signal); }
+.interest--stat .interest-desc { color: var(--on-ink-muted); max-width: none; }
+
+.interest-stat {
+  margin: 0 0 1rem;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 112;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: var(--on-ink);
+}
+
+.interest-stat span {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 94;
+  letter-spacing: 0.01em;
+  color: var(--on-ink-muted);
+}
+
+
 /* ---------- Contact ---------- */
 
 .contact {
@@ -983,6 +1064,8 @@ a { color: inherit; text-decoration: none; }
   .feature-shot { order: -1; }
 
   .project-grid { grid-template-columns: minmax(0, 1fr); }
+
+  .interests { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 720px) {
