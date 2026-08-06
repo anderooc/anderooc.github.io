@@ -72,42 +72,113 @@
     });
   });
 
-  /* ---- Reveal on scroll ----
-     Markup renders visible by default; the hidden state only exists once .js is set,
-     so a failed observer or a headless render never ships a blank page. */
+  /* ---- Stagger indices within common parents ---- */
+
+  var staggerGroups = [
+    '.sheet',
+    '.project-grid',
+    '.awards',
+    '.interests',
+    '.book-list',
+    '.contact-inner',
+    '.hero-text'
+  ];
+
+  staggerGroups.forEach(function (sel) {
+    document.querySelectorAll(sel).forEach(function (group) {
+      Array.prototype.forEach.call(group.querySelectorAll(':scope > [data-reveal]'), function (el, i) {
+        el.style.setProperty('--reveal-i', String(i));
+      });
+    });
+  });
+
+  document.querySelectorAll('.book-series').forEach(function (list) {
+    Array.prototype.forEach.call(list.children, function (el, i) {
+      el.style.setProperty('--pill-i', String(i));
+    });
+  });
+
+  /* ---- Count-up for interest stats ---- */
+
+  var animateCount = function (el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (!target || el.dataset.counted === '1') return;
+    el.dataset.counted = '1';
+
+    if (reduceMotion.matches) {
+      el.childNodes[0].textContent = String(target);
+      return;
+    }
+
+    var duration = 1100;
+    var start = performance.now();
+
+    var tick = function (now) {
+      var t = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 4);
+      var value = Math.round(target * eased);
+      el.childNodes[0].textContent = String(value);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.childNodes[0].textContent = String(target);
+    };
+
+    el.childNodes[0].textContent = '0';
+    requestAnimationFrame(tick);
+  };
+
+  /* ---- Reveal on scroll ---- */
 
   var revealables = document.querySelectorAll('[data-reveal]');
 
-  var revealAll = function () {
-    revealables.forEach(function (el) { el.classList.add('is-in'); });
+  var onReveal = function (el) {
+    el.classList.add('is-in');
+    var counter = el.querySelector('[data-count]');
+    if (counter) animateCount(counter);
+    if (el.hasAttribute('data-count')) animateCount(el);
   };
 
-  // Hero should never wait on intersection (above-the-fold, and headless/slow tabs).
-  document.querySelectorAll('.hero [data-reveal]').forEach(function (el) {
-    el.classList.add('is-in');
-  });
+  var revealAll = function () {
+    revealables.forEach(onReveal);
+  };
 
-  if (!('IntersectionObserver' in window) || reduceMotion.matches || document.visibilityState !== 'visible') {
+  document.querySelectorAll('.hero [data-reveal]').forEach(onReveal);
+
+  var isInViewport = function (el) {
+    var rect = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    // Require a meaningful chunk of the element to actually be on screen.
+    return rect.top < vh * 0.82 && rect.bottom > vh * 0.12;
+  };
+
+  if (!('IntersectionObserver' in window) || reduceMotion.matches) {
     revealAll();
   } else {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
+        onReveal(entry.target);
         observer.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    }, {
+      // Shrink the active band so items wait until they are clearly on screen.
+      rootMargin: '-8% 0px -28% 0px',
+      threshold: [0.15, 0.25]
+    });
 
     revealables.forEach(function (el) {
       if (el.closest('.hero')) return;
-      observer.observe(el);
+      // Only reveal immediately if already in the viewport on load.
+      if (isInViewport(el)) onReveal(el);
+      else observer.observe(el);
     });
 
-    document.addEventListener('visibilitychange', function () {
-      if (document.visibilityState !== 'visible') revealAll();
-    });
-
-    window.setTimeout(revealAll, 3000);
+    // Failsafe for stuck transitions: reveal only what is currently visible, never the whole page.
+    window.setTimeout(function () {
+      revealables.forEach(function (el) {
+        if (el.classList.contains('is-in')) return;
+        if (isInViewport(el)) onReveal(el);
+      });
+    }, 5000);
   }
 
   /* ---- Active section in nav ---- */

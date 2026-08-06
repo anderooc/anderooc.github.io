@@ -1354,20 +1354,135 @@ a { color: inherit; text-decoration: none; }
 
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.75s var(--ease-out-quart), transform 0.75s var(--ease-out-quint);
+  transform: translateY(22px);
+  filter: blur(0);
+  transition:
+    opacity 0.8s var(--ease-out-quart),
+    transform 0.8s var(--ease-out-quint),
+    filter 0.8s var(--ease-out-quart);
+  transition-delay: calc(var(--reveal-i, 0) * 70ms);
+}
+
+.js [data-reveal="fade"] {
+  transform: none;
+}
+
+.js [data-reveal="up"] {
+  transform: translateY(28px);
+}
+
+.js [data-reveal="left"] {
+  transform: translateX(-22px);
+}
+
+.js [data-reveal="right"] {
+  transform: translateX(22px);
+}
+
+.js [data-reveal="scale"] {
+  transform: translateY(16px) scale(0.94);
+}
+
+.js .hero [data-reveal] {
+  filter: blur(6px);
 }
 
 .js [data-reveal].is-in {
   opacity: 1;
   transform: none;
+  filter: blur(0);
 }
 
-.js .hero [data-reveal]:nth-child(1) { transition-delay: 0.05s; }
-.js .hero [data-reveal]:nth-child(2) { transition-delay: 0.14s; }
-.js .hero [data-reveal]:nth-child(3) { transition-delay: 0.23s; }
-.js .hero [data-reveal]:nth-child(4) { transition-delay: 0.32s; }
-.js .hero .portrait[data-reveal] { transition-delay: 0.2s; }
+.js .hero [data-reveal]:nth-child(1) { --reveal-i: 0; }
+.js .hero [data-reveal]:nth-child(2) { --reveal-i: 1; }
+.js .hero [data-reveal]:nth-child(3) { --reveal-i: 2; }
+.js .hero [data-reveal]:nth-child(4) { --reveal-i: 3; }
+.js .hero .portrait[data-reveal] { --reveal-i: 2; }
+
+/* Section heads draw their rule in */
+.js .section-head[data-reveal] {
+  transform: none;
+}
+
+.js .section-head[data-reveal]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--heading);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease-out-quint);
+  transition-delay: calc(var(--reveal-i, 0) * 70ms + 120ms);
+}
+
+.js .section-head {
+  position: relative;
+}
+
+.js .section-head[data-reveal].is-in::after {
+  transform: scaleX(1);
+}
+
+.js .section-head[data-reveal].is-in {
+  border-bottom-color: transparent;
+}
+
+/* Dune pills cascade when spotlight enters */
+.js .book-spotlight:not(.is-in) .book-series li {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.js .book-spotlight .book-series li {
+  transition:
+    opacity 0.45s var(--ease-out-quart),
+    transform 0.45s var(--ease-out-quint),
+    background-color 0.3s,
+    box-shadow 0.3s;
+  transition-delay: calc(0.2s + var(--pill-i, 0) * 55ms);
+}
+
+.js .book-spotlight.is-in .book-series li {
+  opacity: 1;
+  transform: none;
+}
+
+/* Soft hero atmosphere drift */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-bg {
+    animation: hero-drift 18s var(--ease-out-quart) infinite alternate;
+  }
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.06) translate(-1.5%, 1%); }
+}
+
+/* Button sheen */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 0.22) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.55s var(--ease-out-quint);
+  pointer-events: none;
+}
+
+.btn:hover::after { transform: translateX(120%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn::after { display: none; }
+}
 
 /* ---------- Responsive ---------- */
 
@@ -1500,10 +1615,18 @@ a { color: inherit; text-decoration: none; }
     transition-delay: 0ms !important;
   }
 
-  .js [data-reveal] {
+  .js [data-reveal],
+  .js .book-spotlight:not(.is-in) .book-series li,
+  .js .book-spotlight .book-series li {
     opacity: 1;
     transform: none;
+    filter: none;
   }
+
+  .js .section-head[data-reveal]::after { transform: scaleX(1); }
+  .js .section-head[data-reveal] { border-bottom-color: var(--heading); }
+
+  .hero-bg { animation: none !important; }
 
   .portrait:hover::before,
   .portrait:hover::after,
@@ -1512,6 +1635,8 @@ a { color: inherit; text-decoration: none; }
   .project-card:hover,
   .project-card:hover .project-card-media img,
   .awards li:hover,
+  .book-item:hover,
+  .interest:hover,
   .btn:hover { transform: none; }
 }
 
