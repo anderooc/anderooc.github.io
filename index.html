@@ -3,169 +3,255 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Andrew Chang — software engineer at Bank of America.">
-  <title>Andrew Chang</title>
+  <title>Andrew Chang - Software Engineer</title>
+  <meta name="description" content="Andrew Chang is a software engineer at Bank of America and an Emory CS alum. He builds tournament software, ML models, and tools for the things he's obsessed with.">
+  <link rel="canonical" href="https://anderooc.github.io/">
+  <meta name="theme-color" content="#101725">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Andrew Chang - Software Engineer">
+  <meta property="og:description" content="Emory CS alum and software engineer at Bank of America. I turn whatever I'm obsessed with into software.">
+  <meta property="og:url" content="https://anderooc.github.io/">
+  <meta property="og:image" content="https://anderooc.github.io/images/Chang.Andrew.jpg">
+  <meta name="twitter:card" content="summary">
+
   <link rel="icon" type="image/png" href="images/logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..800;1,75..125,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=6">
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span class="progress-bar"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a href="#" class="logo" data-scroll-top>Andrew Chang</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#" data-scroll-top>About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-    </button>
+    <div class="header-inner">
+      <a href="#top" class="logo" data-scroll-top>
+        <span class="logo-mark" aria-hidden="true"></span>
+        Andrew Chang
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="about">
-      <div class="hero-text">
-        <h1>Hi, I'm Andrew!</h1>
-        <p class="lead">
-          I am a Emory Computer Science alumni currently working as a software engineer at Bank of America. In my free time
-          I like to build projects that stem from my interests and hobbies. Currently building <a href="https://pool-play-one.vercel.app" target="_blank" rel="noopener noreferrer">PoolPlay</a>
-        </p>
-        <div class="hero-links">
-          <a href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a href="AndrewChangResume.pdf" download>Resume</a>
-          <a href="mailto:andrew.chang.sd@gmail.com">Email</a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="status" data-reveal>
+            <span class="status-dot" aria-hidden="true"></span>
+            Software Engineer at Bank of America
+          </p>
+          <h1 data-reveal>Andrew<br>Chang</h1>
+          <p class="lead" data-reveal>
+            Emory CS alum building risk systems by day, and turning obsessions into working software by night.
+          </p>
+          <div class="hero-links" data-reveal>
+            <a class="btn btn-light" href="mailto:andrew.chang.sd@gmail.com">Email me</a>
+            <a class="btn btn-ghost-light" href="AndrewChangResume.pdf" download>Résumé</a>
+            <a class="text-link" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="text-link" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
         </div>
+
+        <figure class="portrait" data-reveal>
+          <img src="images/Chang.Andrew.jpg" alt="Andrew Chang" width="160" height="200" fetchpriority="high">
+        </figure>
       </div>
-      <img src="images/Chang.Andrew.jpg" alt="Andrew Chang" class="headshot">
     </section>
 
-    <section class="projects" id="projects">
-      <h2>Projects I've worked on</h2>
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2>Work</h2>
+        <p class="section-meta">Emory University, B.S. Computer Science, Class of 2026</p>
+      </div>
+
+      <ol class="sheet">
+        <li class="row" data-reveal>
+          <p class="row-year">2025&thinsp;-&thinsp;Now</p>
+          <div class="row-body">
+            <h3>Bank of America <span class="row-role">Software Engineer</span></h3>
+            <p class="row-desc">
+              Started as an intern and came back full time. Built a timeseries ticker-dependency dashboard
+              for Value-at-Risk backtesting, kicked off a migration of 7B+ records from Sybase to Apache
+              Iceberg for horizontal scaling on Spark, and shipped a Python charting library plus an internal
+              portal for standardized financial visualizations.
+            </p>
+            <p class="row-tags">Python · Spark · Hadoop · Iceberg · SQL</p>
+          </div>
+          <p class="row-aside">Jersey City, NJ</p>
+        </li>
+
+        <li class="row" data-reveal>
+          <p class="row-year">2024</p>
+          <div class="row-body">
+            <h3>SAI <span class="row-role">Software Engineer Intern</span></h3>
+            <p class="row-desc">
+              Worked on an AI course-support platform used by 20,000+ students and 20 professors. Shipped
+              study-app features from Figma mockups and led WCAG 2.1 AA compliance: responsive layout,
+              keyboard navigation, and zoom support.
+            </p>
+            <p class="row-tags">TypeScript · HTML · CSS · Accessibility</p>
+          </div>
+          <p class="row-aside">New York, NY</p>
+        </li>
+
+        <li class="row" data-reveal>
+          <p class="row-year">2024</p>
+          <div class="row-body">
+            <h3>Casing Machine <span class="row-role">Developer</span></h3>
+            <p class="row-desc">
+              Case-interview prep platform with 10K+ users. Built the interview UI and voice-to-text
+              transcription, and rewrote the GPT prompt templates that drive longer mock interviews.
+            </p>
+            <p class="row-tags">JavaScript · Pug · Firebase</p>
+          </div>
+          <p class="row-aside">Atlanta, GA</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section section--projects" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="section-meta">Things I built because I needed them</p>
+      </div>
+
+      <article class="feature" data-reveal>
+        <figure class="feature-shot">
+          <img src="images/poolplay.png" alt="PoolPlay landing page: Run the whole tournament on PoolPlay" loading="lazy" decoding="async">
+        </figure>
+        <div class="feature-text">
+          <p class="row-year">2026 · Featured</p>
+          <h3>PoolPlay</h3>
+          <p class="feature-desc">
+            A tournament platform for collegiate club volleyball, born from running events as club
+            president across spreadsheets, whiteboards, and Venmo. Registration, pool draws, brackets,
+            court scheduling, and live scoring live in one place.
+          </p>
+          <p class="row-tags">Next.js · React · TypeScript · Supabase · PostgreSQL · Drizzle ORM</p>
+          <p class="feature-links">
+            <a class="btn" href="https://pool-play-one.vercel.app" target="_blank" rel="noopener noreferrer">Live site</a>
+            <a class="btn btn-ghost" href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer">Repo</a>
+          </p>
+        </div>
+      </article>
 
       <div class="project-grid">
-
-        <article class="project-card">
-          <a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image">
-              <img src="images/poolplay.png" alt="PoolPlay">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">Next.js · React · TypeScript · Supabase · PostgreSQL · Drizzle ORM</p>
-            <h3><a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer">PoolPlay</a></h3>
-            <p class="card-desc">
-              Tournament platform for collegiate club volleyball. Inspired from my own experience as club president scheduling and managing tournaments
-              across spreadsheets, social media platforms, and payment platforms. PoolPlay handles registration, pool draws,
-              brackets, court scheduling, and live scoring in one consolidated platform.
-            </p>
-            <a href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image card-image--contain">
-              <img src="images/pomodoro.png?v=2" alt="Pomodoro+">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">React · Flask · PostgreSQL · AWS</p>
-            <h3><a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Pomodoro+</a></h3>
-            <p class="card-desc">
-              Consolidated study tool with Pomodoro timers, shared study sessions, and a Chrome extension
-              to block distracting sites.
-            </p>
-            <a href="https://github.com/raphaelpalacio/CS370Project" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image">
-              <img src="images/llm-refusal.png" alt="LLM Refusal Signal">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">Python · Ollama · NLP</p>
+        <article class="project-card" data-reveal>
+          <figure class="project-card-media">
+            <img src="images/llm-refusal.png" alt="Bar chart of average semantic leak by probing category for Llama 3.1" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-card-body">
+            <p class="row-year">2026</p>
             <h3><a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer">LLM Refusal Signal</a></h3>
-            <p class="card-desc">
-              Research project examining whether open-weight LLMs would inadverdently leak hidden rule sets in their refusal messages.
+            <p class="row-desc">
+              Do open-weight models leak the hidden rules they were told to keep, just by refusing?
+              Probed Llama 3.1 across five question categories and scored how much of the secret rule
+              set showed up in the refusal wording.
             </p>
-            <a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+            <p class="row-tags">Python · Ollama · NLP</p>
           </div>
         </article>
 
-        <article class="project-card">
-          <a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image card-image--contain">
-              <img src="images/nbaBetting.png" alt="NBA Category Heatmap">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">Python · Kaggle · scikit-learn</p>
-            <h3><a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">NBA ML Player Prediction</a></h3>
-            <p class="card-desc">
-              ML project with the end goal of beating the house on NBA player prop bets. Compared performance of neural
-              nets, linear regression, and k-NN models trained on 25 years of historal NBA data pulled from Kaggle. 
+        <article class="project-card" data-reveal>
+          <figure class="project-card-media">
+            <img src="images/pomodoro.png" alt="Pomodoro+ landing page reading Ditch the Guilt" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-card-body">
+            <p class="row-year">2024</p>
+            <h3><a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Pomodoro+</a></h3>
+            <p class="row-desc">
+              A study tool with Pomodoro timers, shared sessions with friends, and a Chrome extension
+              that blocks the sites you swore you would not open. Auth0 over Postgres on AWS RDS.
             </p>
-            <a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+            <p class="row-tags">React · Flask · PostgreSQL · AWS</p>
+            <p class="row-links"><a href="https://github.com/raphaelpalacio/CS370Project" target="_blank" rel="noopener noreferrer">Repo</a></p>
           </div>
         </article>
 
-        <article class="project-card">
-          <a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image">
-              <img src="images/stockPriceEx.png" alt="Stock Price Predictor">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">Python · scikit-learn</p>
-            <h3><a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Stock Price Predictor</a></h3>
-            <p class="card-desc">
-              This stock price predictor was a machine learning research project under the mentorship of CMU
-              professor Vipul Goyal. Trained over historical stock data, the model predicts future closing prices. Stock history is called from Alpha Vantage API.
+        <article class="project-card" data-reveal>
+          <figure class="project-card-media">
+            <img src="images/nbaBetting.png" alt="Feature correlation matrix heatmap of NBA box score inputs" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-card-body">
+            <p class="row-year">2024</p>
+            <h3><a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">NBA Prop-Bet EV Model</a></h3>
+            <p class="row-desc">
+              Co-authored paper on beating the house at player prop bets. Trained on 1997-2023 NBA box
+              scores with rolling player averages and opponent defensive trends; an MLP regressor reached
+              R&sup2;&nbsp;0.651 against random forest, ridge, and k-NN baselines.
             </p>
-            <a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+            <p class="row-tags">Python · scikit-learn · pandas</p>
           </div>
         </article>
 
-
-        <article class="project-card">
-          <a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer" class="card-image-link">
-            <div class="card-image card-image--contain">
-              <img src="images/barcode.png" alt="Barcode Scanner">
-            </div>
-          </a>
-          <div class="card-body">
-            <p class="card-meta">Python · OpenCV</p>
-            <h3><a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer">Barcode Scanner</a></h3>
-            <p class="card-desc">
-              Finds barcodes in images by analyzing gradient representations, then draws a
-              bounding box around each one.
+        <article class="project-card" data-reveal>
+          <figure class="project-card-media">
+            <img src="images/stockPriceEx.png" alt="Line chart comparing real and predicted MSFT close prices over 1,600 days" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-card-body">
+            <p class="row-year">2022</p>
+            <h3><a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Stock Close Prediction</a></h3>
+            <p class="row-desc">
+              Research under CMU professor Vipul Goyal. A multilayer perceptron trained on Alpha Vantage
+              price history to predict adjusted close. Published as <em>Stock Close Adjusted Predictions
+              through Neural Networks</em> in Creativity and Innovation, 2022.
             </p>
-            <a href="https://github.com/anderooc/barcode-scanner" target="_blank" rel="noopener noreferrer" class="card-repo-link">Repo ↗</a>
+            <p class="row-tags">Python · scikit-learn</p>
           </div>
         </article>
-
       </div>
+    </section>
+
+    <section class="section" id="awards">
+      <div class="section-head">
+        <h2>Awards</h2>
+        <p class="section-meta">Gyms, hackathons, and late nights in the lab</p>
+      </div>
+
+      <ol class="awards">
+        <li data-reveal><span class="award-year">2024</span><span class="award-name">HackATL</span><span class="award-place">3rd place</span></li>
+        <li data-reveal><span class="award-year">2023</span><span class="award-name">ICPC Southeast USA Regional</span><span class="award-place">2nd place</span></li>
+        <li data-reveal><span class="award-year">2022</span><span class="award-name">AIME</span><span class="award-place">Qualifier</span></li>
+        <li data-reveal><span class="award-year">2022</span><span class="award-name">National Merit Scholarship</span><span class="award-place">Scholar</span></li>
+        <li data-reveal><span class="award-year">2021</span><span class="award-name">USACO</span><span class="award-place">Silver</span></li>
+      </ol>
     </section>
 
     <section class="contact" id="contact">
-      <h2>Say hi!</h2>
-      <p>Feel free to reach out about anything.</p>
-      <div class="hero-links">
-        <a href="mailto:andrew.chang.sd@gmail.com">Email</a>
+      <div class="contact-inner">
+        <p class="contact-kicker" data-reveal>Next up</p>
+        <h2 data-reveal>Say hi.</h2>
+        <p data-reveal>Hiring, building something, or want to argue about volleyball rotations? My inbox is open.</p>
+        <a class="contact-email" data-reveal href="mailto:andrew.chang.sd@gmail.com">andrew.chang.sd@gmail.com</a>
+        <div class="hero-links" data-reveal>
+          <a class="text-link" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="text-link" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="text-link" href="AndrewChangResume.pdf" download>Résumé</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <a href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <p>&copy; <span id="year">2026</span> Andrew Chang</p>
+    <a href="#top" data-scroll-top>Back to top</a>
   </footer>
 
   <script src="js/main.js"></script>
