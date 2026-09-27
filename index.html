@@ -130,11 +130,12 @@
             <h3>Bank of America</h3>
             <p class="set-role">Software Engineer &middot; Jersey City, NJ</p>
             <p class="set-desc">
-              Interned, then came back full time. Built a ticker-dependency dashboard for VaR backtesting,
-              kicked off a 7B+ record migration from Sybase to Apache Iceberg on Spark, and shipped a Python
-              charting library with an internal portal. Now in Market Risk Analytics.
+              Full time on a Java market-risk application, shipping monthly Value-at-Risk releases, maintaining
+              a Python API for risk managers, and removing outdated Ehcache to unblock a Java upgrade. As an
+              intern, built a VaR backtesting dashboard, prototyped a 7B+ record Iceberg migration on Spark, and
+              shipped a Python charting library.
             </p>
-            <p class="tags">Python &middot; Spark &middot; Hadoop &middot; Iceberg &middot; SQL</p>
+            <p class="tags">Java &middot; Python &middot; Spark &middot; Hadoop &middot; Iceberg &middot; SQL</p>
           </li>
           <li class="set">
             <div class="set-top"><span class="set-no">Set 2</span><span class="set-years">2024</span></div>
@@ -178,10 +179,11 @@
               <p class="option-pos"><span>Go</span> Outside &middot; 2026</p>
               <h3>Brackt</h3>
               <p class="hitter-desc">
-                Tournament hub for collegiate club volleyball: registration, pool draws, brackets, court
-                scheduling, and live scoring. Built from running club events myself.
+                Full-stack tournament platform for collegiate club volleyball, covering registration, pools and
+                brackets, court scheduling, and real-time live scoring. I built the tournament engine from scratch,
+                plus a versioned REST API of about 90 routes shared by the web app and an Expo mobile client.
               </p>
-              <p class="tags">Next.js &middot; React &middot; TypeScript &middot; Supabase &middot; PostgreSQL &middot; Drizzle ORM</p>
+              <p class="tags">Next.js &middot; React &middot; TypeScript &middot; Supabase &middot; PostgreSQL &middot; Drizzle ORM &middot; Expo</p>
               <p class="link-row">
                 <a class="chip chip--solid" href="https://brack-t.com" target="_blank" rel="noopener noreferrer">Live site</a>
                 <a class="chip" href="https://github.com/anderooc/brackt" target="_blank" rel="noopener noreferrer">Repo</a>
@@ -189,15 +191,19 @@
             </div>
           </article>
 
-          <article class="hitter" id="hitter-llm" aria-label="LLM Refusal Signal" hidden>
+          <article class="hitter" id="hitter-llm" aria-label="Refusal Signal Extraction" hidden>
             <figure class="hitter-shot">
               <img src="images/llm-refusal.png" alt="Bar chart of refusal signal results across models" loading="lazy" decoding="async">
             </figure>
             <div class="hitter-body">
               <p class="option-pos"><span>1</span> Middle quick &middot; 2026</p>
-              <h3>LLM Refusal Signal</h3>
-              <p class="hitter-desc">Probing whether open-weight models leak hidden rules in how they refuse.</p>
-              <p class="tags">Python &middot; Ollama &middot; NLP</p>
+              <h3>Refusal Signal Extraction</h3>
+              <p class="hitter-desc">
+                Research package and CLI that measures how much an LLM's refusals reveal about the hidden rules in
+                its system prompt. Using only benign probes, every category leaked paraphrased policy content, and a
+                second model that never saw the prompt reconstructed the intent of all three planted rules.
+              </p>
+              <p class="tags">Python &middot; Ollama &middot; SentenceTransformers &middot; pandas</p>
               <p class="link-row">
                 <a class="chip chip--solid" href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer">Repo</a>
               </p>
@@ -211,7 +217,11 @@
             <div class="hitter-body">
               <p class="option-pos"><span>Red</span> Opposite &middot; 2024</p>
               <h3>Pomodoro+</h3>
-              <p class="hitter-desc">Timers, shared sessions, and a blocker extension for the sites you swore off.</p>
+              <p class="hitter-desc">
+                Productivity web app built around the Pomodoro technique: timed focus sessions, shared breaks with
+                friends, and a browser extension that blocks distracting sites. Built as a team project with a React
+                front end, Auth0 sign-in, and a Flask and PostgreSQL back end on AWS.
+              </p>
               <p class="tags">React &middot; Flask &middot; PostgreSQL &middot; AWS</p>
               <p class="link-row">
                 <a class="chip chip--solid" href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Live site</a>
@@ -219,14 +229,18 @@
             </div>
           </article>
 
-          <article class="hitter" id="hitter-nba" aria-label="NBA Prop-Bet EV Model" hidden>
+          <article class="hitter" id="hitter-nba" aria-label="NBA Player Performance Prediction" hidden>
             <figure class="hitter-shot">
-              <img src="images/nbaBetting.png" alt="Heatmap from the NBA prop-bet model analysis" loading="lazy" decoding="async">
+              <img src="images/nbaBetting.png" alt="Feature correlation heatmap from the NBA player performance analysis" loading="lazy" decoding="async">
             </figure>
             <div class="hitter-body">
               <p class="option-pos"><span>Pipe</span> Back row &middot; 2024</p>
-              <h3>NBA Prop-Bet EV Model</h3>
-              <p class="hitter-desc">MLP regressor at R&sup2; 0.651, benchmarked against random forest, ridge, and k-NN baselines.</p>
+              <h3>NBA Player Performance Prediction</h3>
+              <p class="hitter-desc">
+                Co-authored paper predicting NBA player point totals from 1997&ndash;2023 box-score data and using the
+                predictions to estimate the expected value of player prop bets. Our tuned MLP regressor reached an
+                R&sup2; of 0.651 and was benchmarked against random forest, ridge regression, and k-NN baselines.
+              </p>
               <p class="tags">Python &middot; scikit-learn &middot; pandas</p>
               <p class="link-row">
                 <a class="chip chip--solid" href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">Repo</a>
@@ -241,8 +255,12 @@
             <div class="hitter-body">
               <p class="option-pos"><span>3</span> 3 ball &middot; 2022</p>
               <h3>Stock Close Prediction</h3>
-              <p class="hitter-desc">Research under CMU professor Vipul Goyal on adjusted-close forecasting.</p>
-              <p class="tags">Python &middot; scikit-learn</p>
+              <p class="hitter-desc">
+                Research project under CMU professor Vipul Goyal forecasting next-day closing prices for Apple,
+                Microsoft, Tesla, and Meta. I trained an MLP regressor on 100-day windows of daily adjusted prices from
+                the Alpha Vantage API and evaluated it on a chronological 70/30 train/test split.
+              </p>
+              <p class="tags">Python &middot; scikit-learn &middot; pandas</p>
               <p class="link-row">
                 <a class="chip chip--solid" href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Repo</a>
               </p>
@@ -278,7 +296,7 @@
       </button>
       <button type="button" class="attacker" aria-controls="hitter-llm" aria-pressed="false">
         <span class="attacker-call">1</span>
-        <span class="attacker-name">LLM Refusal Signal</span>
+        <span class="attacker-name">Refusal Signal</span>
         <span class="visually-hidden">, middle quick</span>
       </button>
       <button type="button" class="attacker" aria-controls="hitter-pomodoro" aria-pressed="false">
@@ -288,7 +306,7 @@
       </button>
       <button type="button" class="attacker" aria-controls="hitter-nba" aria-pressed="false">
         <span class="attacker-call">Pipe</span>
-        <span class="attacker-name">NBA Prop-Bet Model</span>
+        <span class="attacker-name">NBA Player Model</span>
         <span class="visually-hidden">, back row</span>
       </button>
       <button type="button" class="attacker" aria-controls="hitter-stock" aria-pressed="false">
