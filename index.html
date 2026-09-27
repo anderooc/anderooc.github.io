@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Andrew Chang - Software Engineer</title>
-  <meta name="description" content="Andrew Chang is a software engineer at Bank of America and an Emory CS alum. He builds tournament software, ML models, and tools for his hobbies.">
+  <meta name="description" content="Andrew Chang is a software engineer at Bank of America and an Emory CS alum. Play a rally to see his work, projects, and contact info.">
   <link rel="canonical" href="https://anderooc.github.io/">
-  <meta name="theme-color" content="#101725">
+  <meta name="theme-color" content="#050505">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Andrew Chang - Software Engineer">
-  <meta property="og:description" content="Emory CS alum and software engineer at Bank of America. I turn whatever I'm currently interested in into software.">
+  <meta property="og:description" content="Emory CS alum and software engineer at Bank of America. Dig, set, and spike your way through his work.">
   <meta property="og:url" content="https://anderooc.github.io/">
   <meta property="og:image" content="https://anderooc.github.io/images/Chang.Andrew.jpg">
   <meta name="twitter:card" content="summary">
@@ -19,339 +19,339 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..800;1,75..125,400..600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&family=Geist+Mono:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=79">
 
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
-  <div class="progress" aria-hidden="true"><span class="progress-bar"></span></div>
-  <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#top" class="logo" data-scroll-top>
-        <span class="logo-mark" aria-hidden="true"></span>
-        Andrew Chang
-      </a>
-      <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-        <span></span>
-        <span></span>
-      </button>
+  <header class="scoreboard">
+    <a href="#" class="brand" data-timeout aria-label="Andrew Chang, back to warmups">
+      <span class="brand-num" aria-hidden="true">02</span>
+      <span class="brand-name">Andrew Chang</span>
+    </a>
+
+    <div class="board" aria-label="Scoreboard">
+      <div class="team">
+        <span class="team-name">Chang</span>
+        <span class="team-score" id="score-home">0</span>
+      </div>
+      <div class="board-mid">
+        <span class="board-play" id="board-play">Warmups</span>
+        <span class="touches" id="touches" aria-label="Touches this rally: 0 of 3">
+          <i></i><i></i><i></i>
+        </span>
+      </div>
+      <div class="team team--away">
+        <span class="team-score" id="score-away">0</span>
+        <span class="team-name">Opp</span>
+      </div>
     </div>
+
+    <nav class="header-links" aria-label="Quick links">
+      <a href="#" class="timeout" data-timeout>Timeout</a>
+      <a href="AndrewChangResume.pdf" download>Resume</a>
+    </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-text">
-          <p class="status" data-reveal="fade">
-            <span class="status-dot" aria-hidden="true"></span>
-            Software Engineer at Bank of America
+  <main id="main" class="arena" data-scene="home">
+    <div class="gym" aria-hidden="true">
+      <div class="gym-lights"></div>
+      <svg class="court" id="court" preserveAspectRatio="none"></svg>
+      <span class="court-band"></span>
+    </div>
+
+    <!-- Warmups -->
+    <section class="scene scene--home" data-scene="home" aria-labelledby="home-title">
+      <div class="home-grid">
+        <div class="home-intro">
+          <p class="eyebrow">Starting lineup &middot; No. 02 &middot; Libero</p>
+          <h1 id="home-title">Andrew<br>Chang</h1>
+          <p class="lede">
+            Software engineer at Bank of America, Emory CS&nbsp;'26. I build tournament software,
+            ML experiments, and tools for whatever I'm into. Lately that's a lot of volleyball.
           </p>
-          <h1 data-reveal="up">Andrew<br>Chang</h1>
-          <p class="lead" data-reveal="up">
-            Emory CS alum working on developing and maintaining risk systems. I also build software inspired by my hobbies.
+          <p class="link-row">
+            <a class="chip chip--solid" href="AndrewChangResume.pdf" download>Resume</a>
+            <a class="chip" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="chip" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="chip" href="mailto:andrew.chang.sd@gmail.com">Email</a>
           </p>
-          <div class="hero-links" data-reveal="up">
-            <a class="btn btn-light" href="mailto:andrew.chang.sd@gmail.com">Email me</a>
-            <a class="btn btn-ghost-light" href="AndrewChangResume.pdf" download>Resume</a>
-            <a class="text-link" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="text-link" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
         </div>
 
-        <figure class="portrait" data-reveal="scale">
-          <img src="images/Chang.Andrew.jpg" alt="Andrew Chang" width="160" height="200" fetchpriority="high">
-        </figure>
+        <div class="home-side">
+          <figure class="player-card">
+            <img src="images/Chang.Andrew.jpg" alt="Andrew Chang" width="320" height="400" fetchpriority="high">
+            <figcaption>
+              <span class="player-num">02</span>
+              <span class="player-meta"><b>Chang</b> Libero &middot; Emory</span>
+            </figcaption>
+          </figure>
+
+          <div class="playbook" aria-labelledby="playbook-title">
+            <p class="playbook-title" id="playbook-title">Coach's board</p>
+            <ol class="plays">
+              <li class="play play--dig">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34V8M11 16l9-9 9 9"/></svg>
+                <span><b>Dig</b> Flick the ball up</span>
+                <em>Work</em>
+              </li>
+              <li class="play play--set">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 26c8-16 22-16 30 0M29 18l6 8-9 2"/></svg>
+                <span><b>Set</b> Flick it sideways</span>
+                <em>Projects</em>
+              </li>
+              <li class="play play--spike">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6v26M11 24l9 9 9-9"/></svg>
+                <span><b>Spike</b> Smash it down</span>
+                <em>Contact</em>
+              </li>
+            </ol>
+            <p class="playbook-note">Three touches per side. Dig, set, then spike for a clean kill. On the set, call your hitter on the court. Arrow keys work too.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="work">
-      <div class="section-head" data-reveal="fade">
-        <h2>Work</h2>
-        <p class="section-meta">Emory University, B.S. Computer Science, Class of 2026</p>
-      </div>
+    <!-- Dig: Work -->
+    <section class="scene scene--dig" data-scene="dig" aria-labelledby="dig-title" hidden>
+      <div class="scene-inner">
+        <header class="scene-head">
+          <p class="scene-call">Dig</p>
+          <h2 id="dig-title">Work</h2>
+          <p class="scene-sub">Box score from every set so far. Emory University, B.S. Computer Science, 2026.</p>
+        </header>
 
-      <ol class="sheet">
-        <li class="row" data-reveal>
-          <p class="row-year">2025&thinsp;-&thinsp;Now</p>
-          <div class="row-body">
-            <h3>Bank of America <span class="row-role">Software Engineer</span></h3>
-            <p class="row-desc">
-              Started as an intern and returned full time. Built a timeseries ticker-dependency dashboard
-              for Value-at-Risk backtesting, kicked off a migration of 7B+ records from Sybase to Apache
-              Iceberg for horizontal scaling on Spark, and shipped a Python charting library plus an internal
-              portal for standardized financial visualizations. Currently working in Market Risk Analytics.
+        <ol class="sets">
+          <li class="set set--live">
+            <div class="set-top"><span class="set-no">Set 3</span><span class="set-live">Live</span><span class="set-years">2025&ndash;Now</span></div>
+            <h3>Bank of America</h3>
+            <p class="set-role">Software Engineer &middot; Jersey City, NJ</p>
+            <p class="set-desc">
+              Interned, then came back full time. Built a ticker-dependency dashboard for VaR backtesting,
+              kicked off a 7B+ record migration from Sybase to Apache Iceberg on Spark, and shipped a Python
+              charting library with an internal portal. Now in Market Risk Analytics.
             </p>
-            <p class="row-tags">Python · Spark · Hadoop · Iceberg · SQL</p>
-          </div>
-          <p class="row-aside">Jersey City, NJ</p>
-        </li>
-
-        <li class="row" data-reveal>
-          <p class="row-year">2024</p>
-          <div class="row-body">
-            <h3>SAI <span class="row-role">Software Engineer Intern</span></h3>
-            <p class="row-desc">
-              Worked on an AI course-support platform used by 20,000+ students and 20 professors. Shipped
-              study-app features from Figma mockups and led WCAG 2.1 AA compliance: responsive layout,
-              keyboard navigation, and zoom support.
+            <p class="tags">Python &middot; Spark &middot; Hadoop &middot; Iceberg &middot; SQL</p>
+          </li>
+          <li class="set">
+            <div class="set-top"><span class="set-no">Set 2</span><span class="set-years">2024</span></div>
+            <h3>SAI</h3>
+            <p class="set-role">Software Engineer Intern &middot; New York, NY</p>
+            <p class="set-desc">
+              Worked on an AI course-support platform used by 20,000+ students and 20 professors.
+              Shipped study-app features from Figma mockups and led WCAG 2.1 AA compliance.
             </p>
-            <p class="row-tags">TypeScript · HTML · CSS · Accessibility</p>
-          </div>
-          <p class="row-aside">New York, NY</p>
-        </li>
-
-        <li class="row" data-reveal>
-          <p class="row-year">2024</p>
-          <div class="row-body">
-            <h3>Casing Machine <span class="row-role">Developer</span></h3>
-            <p class="row-desc">
+            <p class="tags">TypeScript &middot; HTML &middot; CSS &middot; Accessibility</p>
+          </li>
+          <li class="set">
+            <div class="set-top"><span class="set-no">Set 1</span><span class="set-years">2024</span></div>
+            <h3>Casing Machine</h3>
+            <p class="set-role">Developer &middot; Atlanta, GA</p>
+            <p class="set-desc">
               Case-interview prep platform with 10K+ users. Built the interview UI and voice-to-text
               transcription, and rewrote the GPT prompt templates that drive longer mock interviews.
             </p>
-            <p class="row-tags">JavaScript · Pug · Firebase</p>
-          </div>
-          <p class="row-aside">Atlanta, GA</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section section--projects" id="projects">
-      <div class="section-head" data-reveal="fade">
-        <h2>Projects</h2>
-        <p class="section-meta">Things I built from my interests</p>
-      </div>
-
-      <article class="feature" data-reveal>
-        <figure class="feature-shot">
-          <img src="images/poolplay.png" alt="PoolPlay landing page: Run the whole tournament on PoolPlay" loading="lazy" decoding="async">
-        </figure>
-        <div class="feature-text">
-          <p class="row-year">2026 · Featured</p>
-          <h3>PoolPlay</h3>
-          <p class="feature-desc">
-            A tournament platform for collegiate club volleyball, born from running events as club
-            president across spreadsheets, whiteboards, and Venmo. Registration, pool draws, brackets,
-            court scheduling, and live scoring live in one place.
-          </p>
-          <p class="row-tags">Next.js · React · TypeScript · Supabase · PostgreSQL · Drizzle ORM</p>
-          <p class="feature-links">
-            <a class="btn" href="https://pool-play-one.vercel.app" target="_blank" rel="noopener noreferrer">Live site</a>
-            <a class="btn btn-ghost" href="https://github.com/anderooc/PoolPlay" target="_blank" rel="noopener noreferrer">Repo</a>
-          </p>
-        </div>
-      </article>
-
-      <div class="project-grid">
-        <article class="project-card" data-reveal>
-          <figure class="project-card-media">
-            <img src="images/llm-refusal.png" alt="Bar chart of average semantic leak by probing category for Llama 3.1" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-card-body">
-            <p class="row-year">2026</p>
-            <h3><a href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer">LLM Refusal Signal</a></h3>
-            <p class="row-desc">
-              Do open-weight models leak the hidden rules they were told to keep, just by refusing?
-              Probed Llama 3.1 across five question categories and scored how much of the secret rule
-              set showed up in the refusal wording.
-            </p>
-            <p class="row-tags">Python · Ollama · NLP</p>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <figure class="project-card-media">
-            <img src="images/pomodoro.png" alt="Pomodoro+ landing page reading Ditch the Guilt" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-card-body">
-            <p class="row-year">2024</p>
-            <h3><a href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Pomodoro+</a></h3>
-            <p class="row-desc">
-              A study tool with Pomodoro timers, shared sessions with friends, and a Chrome extension
-              that blocks the sites you swore you would not open. Auth0 over Postgres on AWS RDS.
-            </p>
-            <p class="row-tags">React · Flask · PostgreSQL · AWS</p>
-            <p class="row-links"><a href="https://github.com/raphaelpalacio/CS370Project" target="_blank" rel="noopener noreferrer">Repo</a></p>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <figure class="project-card-media">
-            <img src="images/nbaBetting.png" alt="Feature correlation matrix heatmap of NBA box score inputs" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-card-body">
-            <p class="row-year">2024</p>
-            <h3><a href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">NBA Prop-Bet EV Model</a></h3>
-            <p class="row-desc">
-              Co-authored paper on beating the house at player prop bets. Trained on 1997-2023 NBA box
-              scores with rolling player averages and opponent defensive trends; an MLP regressor reached
-              R&sup2;&nbsp;0.651 against random forest, ridge, and k-NN baselines.
-            </p>
-            <p class="row-tags">Python · scikit-learn · pandas</p>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <figure class="project-card-media">
-            <img src="images/stockPriceEx.png" alt="Line chart comparing real and predicted MSFT close prices over 1,600 days" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-card-body">
-            <p class="row-year">2022</p>
-            <h3><a href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Stock Close Prediction</a></h3>
-            <p class="row-desc">
-              Research under CMU professor Vipul Goyal. A multilayer perceptron trained on Alpha Vantage
-              price history to predict adjusted close. Published as <em>Stock Close Adjusted Predictions
-              through Neural Networks</em> in Creativity and Innovation, 2022.
-            </p>
-            <p class="row-tags">Python · scikit-learn</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <div class="section-head" data-reveal="fade">
-        <h2>Awards</h2>
-      </div>
-
-      <ol class="awards">
-        <li data-reveal><span class="award-year">2024</span><span class="award-name">HackATL</span><span class="award-place">3rd place</span></li>
-        <li data-reveal><span class="award-year">2023</span><span class="award-name">ICPC Southeast USA Regional</span><span class="award-place">2nd place</span></li>
-        <li data-reveal><span class="award-year">2022</span><span class="award-name">AIME</span><span class="award-place">Qualifier</span></li>
-        <li data-reveal><span class="award-year">2022</span><span class="award-name">National Merit Scholarship</span><span class="award-place">Scholar</span></li>
-        <li data-reveal><span class="award-year">2021</span><span class="award-name">USACO</span><span class="award-place">Silver</span></li>
-      </ol>
-    </section>
-
-
-    <section class="section" id="interests">
-      <div class="section-head" data-reveal="fade">
-        <h2>Interests</h2>
-        <p class="section-meta">What I do when I am not shipping code</p>
-      </div>
-
-      <div class="interests">
-        <article class="interest" data-reveal>
-          <p class="interest-label">Volleyball</p>
-          <h3>Libero</h3>
-          <p class="interest-desc">
-            I played libero/DS for the Emory Men's Club Volleyball team from 2022-2024. Still looking for open gyms and leagues in the Jersey City/NYC area!
-          </p>
-        </article>
-
-        <article class="interest interest--stat" data-reveal>
-          <p class="interest-label">Chess.com</p>
-          <p class="interest-stat" data-count="1870">1870<span>peak blitz rating</span></p>
-          <p class="interest-desc">
-            I do best under the time pressure of 3 minute blitz games, although I'm thinking about playing in OTB tournaments once again.
-          </p>
-        </article>
-      </div>
-    </section>
-
-
-    <section class="section section--dune" id="books">
-      <div class="section-head" data-reveal="fade">
-        <h2>Book List</h2>
-        <p class="section-meta">Mostly science fiction · deep in the <em>Dune</em> saga</p>
-      </div>
-
-      <article class="book-spotlight book-spotlight--dune" data-reveal>
-        <p class="book-tag">Favorite series</p>
-        <h3><em>Dune</em></h3>
-        <p class="book-desc">
-          My favorite book and series. I have read through <em>Heretics of Dune</em> and I am on
-          <em>Chapterhouse: Dune</em> now, the last novel in Frank Herbert&rsquo;s original saga.
-        </p>
-        <ol class="book-series" aria-label="Dune reading progress">
-          <li class="book-series__read">Dune</li>
-          <li class="book-series__read">Dune Messiah</li>
-          <li class="book-series__read">Children of Dune</li>
-          <li class="book-series__read">God Emperor of Dune</li>
-          <li class="book-series__read">Heretics of Dune</li>
-          <li class="book-series__current" aria-current="step">Chapterhouse: Dune</li>
+            <p class="tags">JavaScript &middot; Pug &middot; Firebase</p>
+          </li>
         </ol>
-        <p class="book-progress">On the final book. Not finished yet.</p>
-      </article>
-
-      <ol class="book-list">
-        <li class="book-item book-item--hyperion book-item--now" data-reveal>
-          <p class="book-status">Reading now</p>
-          <div class="book-item-body">
-            <h3><em>Hyperion</em></h3>
-            <p class="book-author">Dan Simmons</p>
-            <p class="book-note">Working through the first novel in the Hyperion Cantos.</p>
-          </div>
-        </li>
-        <li class="book-item book-item--stand" data-reveal>
-          <p class="book-status">Read</p>
-          <div class="book-item-body">
-            <h3><em>The Stand</em></h3>
-            <p class="book-author">Stephen King</p>
-            <p class="book-note">
-              I worked through the unabridged edition during the pandemic, and it hit differently than it
-              probably would have otherwise. King juggles a huge cast without losing the thread, and the
-              slow collapse into two camps still feels unnerving. One of my highest-rated reads.
-            </p>
-          </div>
-        </li>
-        <li class="book-item book-item--ender" data-reveal>
-          <p class="book-status">Read</p>
-          <div class="book-item-body">
-            <h3><em>Ender&rsquo;s Game</em></h3>
-            <p class="book-author">Orson Scott Card</p>
-            <p class="book-note">
-              A classic for a reason. The writing holds up well and
-              the ending still lands even when you know the premise going in. A good read, not just a
-              checkbox on the sci-fi canon list. I'd love to read the other books in the series when I get a chance!
-            </p>
-          </div>
-        </li>
-
-        <li class="book-item book-item--attwn" data-reveal>
-          <p class="book-status">Read</p>
-          <div class="book-item-body">
-            <h3><em>And Then There Were None</em></h3>
-            <p class="book-author">Agatha Christie</p>
-            <p class="book-note">
-              My introduction to Agatha Christie's writing and 'golden-age' mysteries. The greatest mystery novel ever written!
-            </p>
-          </div>
-        </li>
-      </ol>
+      </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-inner">
-        <p class="contact-kicker" data-reveal>Contact me</p>
-        <h2 data-reveal>Say hi!</h2>
-        <p data-reveal>Feel free to reach out about anything, my inbox is open.</p>
-        <a class="contact-email" data-reveal href="mailto:andrew.chang.sd@gmail.com">andrew.chang.sd@gmail.com</a>
-        <div class="hero-links" data-reveal="up">
-          <a class="text-link" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="text-link" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="text-link" href="AndrewChangResume.pdf" download>Resume</a>
+    <!-- Set: Projects -->
+    <section class="scene scene--set" data-scene="set" aria-labelledby="set-title" hidden>
+      <div class="scene-inner">
+        <header class="scene-head">
+          <p class="scene-call">Set</p>
+          <h2 id="set-title">Projects</h2>
+          <p class="scene-sub">Set the ball, then call a hitter on the court. Flick sideways to run through them.</p>
+        </header>
+
+        <div class="hitters" id="hitters">
+          <article class="hitter" id="hitter-brackt" aria-label="Brackt">
+            <figure class="hitter-shot hitter-shot--full">
+              <img src="images/brackt.png" alt="Brackt homepage: run the whole tournament on brackt" decoding="async">
+            </figure>
+            <div class="hitter-body">
+              <p class="option-pos"><span>Go</span> Outside &middot; 2026</p>
+              <h3>Brackt</h3>
+              <p class="hitter-desc">
+                Tournament hub for collegiate club volleyball: registration, pool draws, brackets, court
+                scheduling, and live scoring. Built from running club events myself.
+              </p>
+              <p class="tags">Next.js &middot; React &middot; TypeScript &middot; Supabase &middot; PostgreSQL &middot; Drizzle ORM</p>
+              <p class="link-row">
+                <a class="chip chip--solid" href="https://brack-t.com" target="_blank" rel="noopener noreferrer">Live site</a>
+                <a class="chip" href="https://github.com/anderooc/brackt" target="_blank" rel="noopener noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="hitter" id="hitter-llm" aria-label="LLM Refusal Signal" hidden>
+            <figure class="hitter-shot">
+              <img src="images/llm-refusal.png" alt="Bar chart of refusal signal results across models" loading="lazy" decoding="async">
+            </figure>
+            <div class="hitter-body">
+              <p class="option-pos"><span>1</span> Middle quick &middot; 2026</p>
+              <h3>LLM Refusal Signal</h3>
+              <p class="hitter-desc">Probing whether open-weight models leak hidden rules in how they refuse.</p>
+              <p class="tags">Python &middot; Ollama &middot; NLP</p>
+              <p class="link-row">
+                <a class="chip chip--solid" href="https://github.com/anderooc/llm-refusal-signal" target="_blank" rel="noopener noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="hitter" id="hitter-pomodoro" aria-label="Pomodoro+" hidden>
+            <figure class="hitter-shot">
+              <img src="images/pomodoro.png" alt="Pomodoro+ landing page" loading="lazy" decoding="async">
+            </figure>
+            <div class="hitter-body">
+              <p class="option-pos"><span>Red</span> Opposite &middot; 2024</p>
+              <h3>Pomodoro+</h3>
+              <p class="hitter-desc">Timers, shared sessions, and a blocker extension for the sites you swore off.</p>
+              <p class="tags">React &middot; Flask &middot; PostgreSQL &middot; AWS</p>
+              <p class="link-row">
+                <a class="chip chip--solid" href="https://cs-370-project-x41n.vercel.app/" target="_blank" rel="noopener noreferrer">Live site</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="hitter" id="hitter-nba" aria-label="NBA Prop-Bet EV Model" hidden>
+            <figure class="hitter-shot">
+              <img src="images/nbaBetting.png" alt="Heatmap from the NBA prop-bet model analysis" loading="lazy" decoding="async">
+            </figure>
+            <div class="hitter-body">
+              <p class="option-pos"><span>Pipe</span> Back row &middot; 2024</p>
+              <h3>NBA Prop-Bet EV Model</h3>
+              <p class="hitter-desc">MLP regressor at R&sup2; 0.651, benchmarked against random forest, ridge, and k-NN baselines.</p>
+              <p class="tags">Python &middot; scikit-learn &middot; pandas</p>
+              <p class="link-row">
+                <a class="chip chip--solid" href="https://github.com/blakegrudzien/MLFinal" target="_blank" rel="noopener noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="hitter" id="hitter-stock" aria-label="Stock Close Prediction" hidden>
+            <figure class="hitter-shot">
+              <img src="images/stockPriceEx.png" alt="Chart from the stock close prediction research" loading="lazy" decoding="async">
+            </figure>
+            <div class="hitter-body">
+              <p class="option-pos"><span>3</span> 3 ball &middot; 2022</p>
+              <h3>Stock Close Prediction</h3>
+              <p class="hitter-desc">Research under CMU professor Vipul Goyal on adjusted-close forecasting.</p>
+              <p class="tags">Python &middot; scikit-learn</p>
+              <p class="link-row">
+                <a class="chip chip--solid" href="https://github.com/anderooc/stock-price-prediction" target="_blank" rel="noopener noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
+    <!-- Spike: Contact -->
+    <section class="scene scene--spike" data-scene="spike" aria-labelledby="spike-title" hidden>
+      <div class="scene-inner">
+        <div class="kill">
+          <p class="kill-word" aria-hidden="true">Kill</p>
+          <p class="scene-call">Spike</p>
+          <h2 id="spike-title">Contact</h2>
+          <p class="kill-lede">Point scored. Your serve: say hi about anything, my inbox is open.</p>
+          <a class="kill-email" href="mailto:andrew.chang.sd@gmail.com">andrew.chang.sd@gmail.com</a>
+          <p class="link-row">
+            <a class="chip" href="https://github.com/anderooc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="chip" href="https://linkedin.com/in/andrewchangsd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="chip" href="AndrewChangResume.pdf" download>Resume</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="attackers" id="attackers" role="group" aria-label="Call a set">
+      <button type="button" class="attacker" aria-controls="hitter-brackt" aria-pressed="true">
+        <span class="attacker-call">Go</span>
+        <span class="attacker-name">Brackt</span>
+        <span class="visually-hidden">, outside hitter</span>
+      </button>
+      <button type="button" class="attacker" aria-controls="hitter-llm" aria-pressed="false">
+        <span class="attacker-call">1</span>
+        <span class="attacker-name">LLM Refusal Signal</span>
+        <span class="visually-hidden">, middle quick</span>
+      </button>
+      <button type="button" class="attacker" aria-controls="hitter-pomodoro" aria-pressed="false">
+        <span class="attacker-call">Red</span>
+        <span class="attacker-name">Pomodoro+</span>
+        <span class="visually-hidden">, opposite</span>
+      </button>
+      <button type="button" class="attacker" aria-controls="hitter-nba" aria-pressed="false">
+        <span class="attacker-call">Pipe</span>
+        <span class="attacker-name">NBA Prop-Bet Model</span>
+        <span class="visually-hidden">, back row</span>
+      </button>
+      <button type="button" class="attacker" aria-controls="hitter-stock" aria-pressed="false">
+        <span class="attacker-call">3</span>
+        <span class="attacker-name">Stock Prediction</span>
+        <span class="visually-hidden">, 3 ball</span>
+      </button>
+    </div>
+
+    <span class="ball-shadow" id="ball-shadow" aria-hidden="true"></span>
+
+    <div
+      class="ball"
+      id="ball"
+      role="application"
+      tabindex="0"
+      aria-label="Volleyball. Flick or use arrow keys: up to dig for Work, left or right to set for Projects (on Projects, left or right calls a different hitter), down to spike for Contact. Escape calls a timeout."
+    >
+      <svg class="ball-skin" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <clipPath id="ball-clip"><circle cx="50" cy="50" r="48"/></clipPath>
+          <radialGradient id="ball-shade" cx="0.34" cy="0.28" r="0.8">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.6"/>
+            <stop offset="0.35" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="0.78" stop-color="#000" stop-opacity="0.1"/>
+            <stop offset="1" stop-color="#000" stop-opacity="0.4"/>
+          </radialGradient>
+          <pattern id="ball-hex" width="4.5" height="7.8" patternUnits="userSpaceOnUse">
+            <path d="M0 1.3L2.25 0L4.5 1.3V3.9L2.25 5.2L0 3.9ZM2.25 5.2V7.8"/>
+          </pattern>
+          <path id="ball-band-in" d="M21 68C9 46 16 22 42 16C60 12 80 14 100 22L100 40C80 30 58 28 44 32C30 37 23 50 21 68Z"/>
+          <path id="ball-band-out" d="M15 54C8 34 16 12 40 7C60 3 82 6 100 12L100 30C80 22 60 20 44 24C28 28 18 40 15 54Z"/>
+        </defs>
+        <g clip-path="url(#ball-clip)">
+          <circle cx="50" cy="50" r="48" class="ball-base"/>
+          <g transform="rotate(-8 50 50)">
+            <use href="#ball-band-out" class="ball-red"/>
+            <use href="#ball-band-out" class="ball-navy" transform="rotate(180 50 50)"/>
+            <use href="#ball-band-in" class="ball-navy"/>
+            <use href="#ball-band-in" class="ball-red" transform="rotate(180 50 50)"/>
+            <g class="ball-seams">
+              <use href="#ball-band-in"/>
+              <use href="#ball-band-in" transform="rotate(180 50 50)"/>
+            </g>
+          </g>
+          <rect width="100" height="100" class="ball-hex" fill="url(#ball-hex)"/>
+          <circle cx="50" cy="50" r="48" fill="url(#ball-shade)"/>
+        </g>
+        <circle cx="50" cy="50" r="47.5" class="ball-rim"/>
+      </svg>
+      <span class="ball-aim" id="ball-aim" aria-hidden="true"></span>
+    </div>
+
+    <p class="ball-hint" aria-hidden="true">
+      <span><b>&uarr;</b> Dig</span>
+      <span><b>&harr;</b> Set</span>
+      <span><b>&darr;</b> Spike</span>
+      <span><b>Esc</b> Timeout</span>
+    </p>
+
+    <p class="call" id="call" aria-live="assertive"></p>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> Andrew Chang</p>
-    <a href="#top" data-scroll-top>Back to top</a>
-  </footer>
-
-  <script src="js/main.js?v=15"></script>
+  <script src="js/main.js?v=77"></script>
 </body>
 </html>
