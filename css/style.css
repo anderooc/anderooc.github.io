@@ -1406,6 +1406,59 @@ body.in-play .ball-hint {
   .set-desc { font-size: 0.86rem; }
 }
 
+/* ---------- First load: the gym powers on ---------- */
+/* `backwards` fill only, so nothing stays pinned once the intro is over (the card still tilts on hover). */
+
+.intro .gym { animation: lights-on 0.9s backwards; }
+
+@keyframes lights-on {
+  0% { opacity: 0; animation-timing-function: steps(1, end); }
+  16% { opacity: 0.6; animation-timing-function: steps(1, end); }
+  24% { opacity: 0.08; animation-timing-function: steps(1, end); }
+  38% { opacity: 0.85; animation-timing-function: steps(1, end); }
+  46% { opacity: 0.3; animation-timing-function: ease-out; }
+  70%, 100% { opacity: 1; }
+}
+
+.intro .gym-lights { animation: lights-bar 0.8s var(--ease-out) 0.1s backwards; }
+
+@keyframes lights-bar { from { transform: scaleX(0); opacity: 0; } }
+
+.intro .court {
+  transform-origin: 50% 100%;
+  animation: court-rise 1.1s var(--ease-out) 0.3s backwards;
+}
+
+@keyframes court-rise {
+  from { opacity: 0; transform: translateY(48px) scaleY(0.82); filter: brightness(2.4); }
+  55% { opacity: 1; filter: brightness(1.7); }
+}
+
+.intro .scoreboard { animation: board-drop 0.7s var(--ease-out) 0.55s backwards; }
+
+@keyframes board-drop { from { opacity: 0; transform: translateY(-100%); } }
+
+.intro .scene--home .eyebrow { animation: intro-rise 0.7s var(--ease-out) 0.75s backwards; }
+.intro .scene--home h1 { animation: name-reveal 0.95s var(--ease-out) 0.85s backwards; }
+.intro .scene--home .lede { animation: intro-rise 0.7s var(--ease-out) 1.05s backwards; }
+.intro .scene--home .link-row { animation: intro-rise 0.7s var(--ease-out) 1.15s backwards; }
+.intro .scene--home .player-card { animation: card-deal 0.85s var(--ease-bounce) 1.05s backwards; }
+.intro .scene--home .playbook { animation: board-slide 0.75s var(--ease-out) 1.25s backwards; }
+
+@keyframes intro-rise { from { opacity: 0; transform: translateY(18px); } }
+
+@keyframes name-reveal {
+  from { opacity: 0; clip-path: inset(100% 0 -10% 0); transform: translateY(0.35em); }
+  to { clip-path: inset(0 0 -10% 0); }
+}
+
+@keyframes card-deal {
+  from { opacity: 0; transform: translate(60px, 40px) rotate(14deg) scale(0.9); }
+  to { transform: rotate(-4deg); }
+}
+
+@keyframes board-slide { from { opacity: 0; transform: translateX(40px); } }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -900,8 +900,12 @@
       bounce()
     ]);
     serve.spin = -360;
-    run(serve, { delay: 250, fill: 'backwards' });
+    // With the intro, the serve comes once the lights are up and the lineup is out.
+    var intro = document.documentElement.classList.contains('intro');
+    run(serve, { delay: intro ? 1450 : 250, fill: 'backwards' });
   }
+
+  window.setTimeout(function () { document.documentElement.classList.remove('intro'); }, 3000);
 
   renderTouches();
 })();
