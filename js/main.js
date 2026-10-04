@@ -380,6 +380,7 @@
       ball.classList.toggle('is-floating', kind !== 'rest');
       arena.style.setProperty('--ball-x', (b.sx - cam.r * (1 - b.s)).toFixed(1) + 'px');
       arena.style.setProperty('--ball-y', b.sy.toFixed(1) + 'px');
+      arena.classList.toggle('ball-aloft', kind !== 'rest');
     };
     if (now) mark();
     return mark;

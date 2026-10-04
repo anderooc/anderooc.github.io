@@ -1391,13 +1391,96 @@ body.in-play .ball-hint {
 }
 
 @media (max-width: 560px) {
-  .play {
-    grid-template-columns: 1.6rem 1fr auto;
-    gap: 0.6rem;
-    font-size: 0.82rem;
+  :root {
+    --court-h: clamp(140px, 20vh, 190px);
+    --ball: 54px;
+    --gutter: 1.1rem;
   }
 
-  .play svg { width: 1.6rem; height: 1.6rem; }
+  .scene { padding-top: 1rem; padding-bottom: 1rem; }
+
+  .scene-head {
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    column-gap: 0.6rem;
+    row-gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .scene-call { grid-row: auto; font-size: 2rem; }
+
+  .scene-head h2 { font-size: 1.35rem; }
+
+  .scene-sub {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .eyebrow { margin-bottom: 0.7rem; font-size: 0.68rem; letter-spacing: 0.14em; }
+
+  .home-intro h1 { margin-bottom: 0.9rem; font-size: clamp(2.9rem, 15vw, 3.6rem); }
+
+  .lede { margin-bottom: 1.1rem; font-size: 0.95rem; line-height: 1.5; }
+
+  .home-grid { gap: 1.1rem; }
+
+  .chip { padding: 0.45rem 0.8rem; font-size: 0.82rem; }
+
+  .playbook { padding: 0.85rem 0.95rem; }
+
+  .playbook-title { margin-bottom: 0.55rem; }
+
+  .plays { gap: 0.4rem; margin-bottom: 0.55rem; }
+
+  .play {
+    grid-template-columns: 1.4rem 1fr auto;
+    gap: 0.55rem;
+    font-size: 0.8rem;
+  }
+
+  .play svg { width: 1.4rem; height: 1.4rem; }
+
+  .playbook-note { font-size: 0.74rem; }
+
+  .sets { gap: 0.75rem; }
+
+  .set { gap: 0.4rem; padding: 0.95rem 1rem; }
+
+  .set-top { padding-bottom: 0.5rem; font-size: 0.66rem; }
+
+  .set h3 { font-size: 1.25rem; }
+
+  .set.set--live h3 { font-size: 1.55rem; }
+
+  .set-role { font-size: 0.82rem; }
+
+  .set-desc,
+  .set.set--live .set-desc { font-size: 0.88rem; line-height: 1.5; }
+
+  .tags { font-size: 0.7rem; }
+
+  .hitters { row-gap: 0.85rem; }
+
+  .hitter-shot { aspect-ratio: 2 / 1; }
+
+  .hitter-body { gap: 0.55rem; }
+
+  .hitter-body h3 { font-size: 1.6rem; }
+
+  .hitter-desc { font-size: 0.9rem; line-height: 1.5; }
+
+  .ball-hint { gap: 0.7rem; font-size: 0.64rem; }
+
+  /* Up near the net the hint would sit on top of the scene text. */
+  .arena.ball-aloft .ball-hint { opacity: 0; }
+}
+
+@media (max-width: 560px) and (max-height: 720px) {
+  .home-intro h1 { font-size: clamp(2.6rem, 13vw, 3.1rem); }
+  .playbook-note { display: none; }
+  .plays { margin-bottom: 0; }
+  .hitter-shot { aspect-ratio: 5 / 2; }
 }
 
 @media (max-height: 760px) and (min-width: 861px) {
