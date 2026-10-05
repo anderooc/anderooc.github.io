@@ -4,7 +4,7 @@
     <path id="i" d="M21 68C9 46 16 22 42 16C60 12 80 14 100 22L100 40C80 30 58 28 44 32C30 37 23 50 21 68Z"/>
     <path id="o" d="M15 54C8 34 16 12 40 7C60 3 82 6 100 12L100 30C80 22 60 20 44 24C28 28 18 40 15 54Z"/>
   </defs>
-  <rect width="100" height="100" rx="22" fill="#0a0a0a"/>
+  <rect width="100" height="100" rx="22" fill="#0b1f5c"/>
   <g clip-path="url(#c)">
     <circle cx="50" cy="50" r="34" fill="#f7f7f4"/>
     <g transform="translate(50 50) scale(0.72) translate(-50 -50) rotate(-8 50 50)">

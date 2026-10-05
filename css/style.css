@@ -3,24 +3,25 @@
    ========================================================================== */
 
 :root {
-  --night: oklch(0.09 0 0);
-  --navy: oklch(0.13 0 0);
-  --navy-2: oklch(0.18 0 0);
-  --panel: oklch(0.11 0 0);
+  --night: oklch(0.17 0.075 258);
+  --navy: oklch(0.21 0.075 258);
+  --navy-2: oklch(0.26 0.075 258);
+  --panel: oklch(0.19 0.075 258);
   --panel-edge: oklch(1 0 0 / 0.16);
 
-  --text: oklch(0.97 0 0);
-  --muted: oklch(0.72 0 0);
+  --text: oklch(0.97 0.012 245);
+  --muted: oklch(0.78 0.045 250);
   --faint: oklch(1 0 0 / 0.42);
 
   --accent: oklch(1 0 0);
-  --accent-dim: oklch(0.8 0 0);
-  --blue: oklch(0.14 0 0);
-  --red: oklch(0.55 0 0);
-  --floor: oklch(0.12 0 0);
-  --floor-dark: oklch(0.1 0 0);
-  --free-zone: oklch(0.07 0 0);
-  --line: oklch(0.98 0 0);
+  --accent-dim: oklch(0.82 0.03 245);
+  --sky: oklch(0.78 0.13 240);
+  --blue: oklch(0.22 0.075 258);
+  --red: oklch(0.61 0.045 250);
+  --floor: oklch(0.2 0.075 258);
+  --floor-dark: oklch(0.18 0.075 258);
+  --free-zone: oklch(0.15 0.075 258);
+  --line: oklch(0.98 0.012 245);
 
   --header-h: 4rem;
   --court-h: clamp(170px, 25vh, 300px);
@@ -131,7 +132,7 @@ h1, h2, h3, p { margin: 0; }
   align-items: center;
   gap: 1rem;
   padding: 0 var(--gutter);
-  background: linear-gradient(to bottom, oklch(0.11 0 0), oklch(0.11 0 0 / 0.88));
+  background: linear-gradient(to bottom, oklch(0.19 0.075 258), oklch(0.19 0.075 258 / 0.88));
   border-bottom: 1px solid oklch(1 0 0 / 0.08);
 }
 
@@ -182,7 +183,7 @@ h1, h2, h3, p { margin: 0; }
   min-width: 2.6rem;
   padding: 0.1rem 0.45rem;
   border-radius: 6px;
-  background: oklch(0.06 0 0);
+  background: oklch(0.14 0.075 258);
   border: 1px solid oklch(1 0 0 / 0.08);
   color: var(--accent);
   font-size: 1.6rem;
@@ -193,7 +194,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .team--away .team-score {
-  color: oklch(0.62 0 0);
+  color: oklch(0.68 0.045 250);
   text-shadow: none;
 }
 
@@ -264,7 +265,7 @@ h1, h2, h3, p { margin: 0; }
   transition: color 0.2s;
 }
 
-.header-links a:hover { color: var(--accent); }
+.header-links a:hover { color: var(--sky); }
 
 .timeout {
   opacity: 0;
@@ -329,10 +330,10 @@ body.in-play .timeout {
 
 .court-free { fill: var(--free-zone); }
 .court-grid { stroke: oklch(1 0 0 / 0.07); stroke-width: 1; }
-.court-boards { fill: oklch(0.06 0 0); stroke: oklch(1 0 0 / 0.14); stroke-width: 1; }
+.court-boards { fill: oklch(0.14 0.075 258); stroke: oklch(1 0 0 / 0.14); stroke-width: 1; }
 .court-boards-top { stroke: oklch(1 0 0 / 0.55); stroke-width: 1.5; }
 .court-wood { fill: var(--floor); }
-.court-front { fill: oklch(0.15 0 0); }
+.court-front { fill: oklch(0.23 0.075 258); }
 
 .court-line {
   fill: none;
@@ -344,7 +345,7 @@ body.in-play .timeout {
 
 .court-dash { stroke-width: 1.5; stroke-dasharray: 6 6; filter: none; opacity: 0.6; }
 
-.net-mesh { fill: oklch(0 0 0 / 0.35); }
+.net-mesh { fill: oklch(0.1 0.06 258 / 0.35); }
 .net-thread { stroke: oklch(1 0 0 / 0.18); stroke-width: 1; }
 .net-cable { stroke: oklch(1 0 0 / 0.5); stroke-width: 2; }
 
@@ -355,11 +356,11 @@ body.in-play .timeout {
   filter: drop-shadow(0 0 8px oklch(1 0 0 / 0.6));
 }
 
-.antenna { stroke: oklch(0.35 0 0); stroke-width: 4; }
+.antenna { stroke: oklch(0.42 0.07 258); stroke-width: 4; }
 .antenna--w { stroke: var(--line); }
 
 .post {
-  stroke: oklch(0.55 0 0);
+  stroke: oklch(0.61 0.045 250);
   stroke-width: 6;
   stroke-linecap: round;
 }
@@ -384,7 +385,7 @@ body.in-play .timeout {
   left: 0;
   top: 0;
   border-radius: 50%;
-  background: radial-gradient(closest-side, oklch(0.08 0 0 / 0.6), oklch(0.08 0 0 / 0));
+  background: radial-gradient(closest-side, oklch(0.16 0.075 258 / 0.6), oklch(0.16 0.075 258 / 0));
   pointer-events: none;
   will-change: transform, opacity;
 }
@@ -412,13 +413,13 @@ body.in-play .timeout {
 
 .ball-seams {
   fill: none;
-  stroke: oklch(0.25 0 0 / 0.35);
+  stroke: oklch(0.33 0.075 258 / 0.35);
   stroke-width: 1;
 }
 
 #ball-hex path {
   fill: none;
-  stroke: oklch(0 0 0 / 0.1);
+  stroke: oklch(0.1 0.06 258 / 0.1);
   stroke-width: 0.45;
 }
 
@@ -433,7 +434,7 @@ body.in-play .timeout {
 
 .ball-rim {
   fill: none;
-  stroke: oklch(0.2 0 0 / 0.35);
+  stroke: oklch(0.28 0.075 258 / 0.35);
   stroke-width: 1;
 }
 
@@ -510,7 +511,7 @@ body.in-play .timeout {
 
 .arena.is-rallying .ball-hint { opacity: 0; }
 
-.ball-hint b { color: var(--accent); font-weight: 900; }
+.ball-hint b { color: var(--sky); font-weight: 900; }
 
 body.in-play .ball-hint {
   opacity: 1;
@@ -577,7 +578,7 @@ body.in-play .ball-hint {
   margin: 0 0 -0.55rem -1.7rem;
   border-radius: 50%;
   border: 2px solid oklch(1 0 0 / 0.55);
-  background: oklch(0.1 0 0 / 0.25);
+  background: oklch(0.18 0.075 258 / 0.25);
   transition: border-color 0.2s, background 0.2s;
 }
 
@@ -586,12 +587,12 @@ body.in-play .ball-hint {
   padding: 0.2rem 0.65rem;
   border-radius: 4px;
   border: 1px solid oklch(1 0 0 / 0.5);
-  background: oklch(0.06 0 0 / 0.92);
+  background: oklch(0.14 0.075 258 / 0.92);
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
-  box-shadow: 0 8px 18px oklch(0.05 0 0 / 0.45);
+  box-shadow: 0 8px 18px oklch(0.13 0.075 258 / 0.45);
   transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.25s var(--ease-bounce);
 }
 
@@ -599,7 +600,7 @@ body.in-play .ball-hint {
   max-width: 6.75rem;
   padding: 0.12rem 0.45rem;
   border-radius: 3px;
-  background: oklch(0.06 0 0 / 0.8);
+  background: oklch(0.14 0.075 258 / 0.8);
   font-size: 0.66rem;
   font-weight: 700;
   line-height: 1.2;
@@ -722,14 +723,14 @@ body.in-play .ball-hint {
   white-space: nowrap;
   color: var(--accent);
   -webkit-text-stroke: 1px var(--night);
-  text-shadow: 0 0 30px oklch(1 0 0 / 0.35), 0 10px 40px oklch(0 0 0 / 0.8);
+  text-shadow: 0 0 30px oklch(1 0 0 / 0.35), 0 10px 40px oklch(0.1 0.06 258 / 0.8);
   pointer-events: none;
   opacity: 0;
 }
 
 .call.is-away {
   color: transparent;
-  -webkit-text-stroke: 2px oklch(0.8 0 0);
+  -webkit-text-stroke: 2px oklch(0.82 0.03 245);
   text-shadow: none;
 }
 
@@ -831,7 +832,7 @@ body.in-play .ball-hint {
   line-height: 0.85;
   letter-spacing: -0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .scene-head h2 {
@@ -880,13 +881,13 @@ body.in-play .ball-hint {
   font-weight: 700;
   text-decoration: none;
   color: var(--text);
-  background: oklch(0.13 0 0);
+  background: oklch(0.21 0.075 258);
   transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.2s var(--ease-bounce);
 }
 
 .chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--sky);
+  color: var(--sky);
   transform: translateY(-2px);
 }
 
@@ -897,7 +898,7 @@ body.in-play .ball-hint {
 }
 
 .chip--solid:hover {
-  background: oklch(0.86 0 0);
+  background: oklch(0.88 0.03 245);
   color: var(--night);
 }
 
@@ -917,7 +918,7 @@ body.in-play .ball-hint {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .home-intro h1 {
@@ -950,7 +951,7 @@ body.in-play .ball-hint {
   padding: 0.5rem 0.5rem 0;
   border-radius: 6px;
   background: var(--accent);
-  box-shadow: 0 20px 40px oklch(0.05 0 0 / 0.55);
+  box-shadow: 0 20px 40px oklch(0.13 0.075 258 / 0.55);
   transform: rotate(-4deg);
   transition: transform 0.4s var(--ease-bounce);
 }
@@ -963,13 +964,6 @@ body.in-play .ball-hint {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 3px;
-  filter: grayscale(1) contrast(1.08);
-  transition: filter 0.5s var(--ease-out);
-}
-
-.player-card:hover img,
-.player-card:active img {
-  filter: grayscale(0) contrast(1);
 }
 
 .player-card figcaption {
@@ -1003,9 +997,9 @@ body.in-play .ball-hint {
 .playbook {
   padding: 1.1rem 1.2rem;
   border-radius: 6px;
-  background: oklch(0.07 0 0);
+  background: oklch(0.15 0.075 258);
   border: 1px solid var(--panel-edge);
-  box-shadow: 0 20px 40px oklch(0 0 0 / 0.5);
+  box-shadow: 0 20px 40px oklch(0.1 0.06 258 / 0.5);
 }
 
 .playbook-title {
@@ -1014,7 +1008,7 @@ body.in-play .ball-hint {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: oklch(0.95 0 0 / 0.72);
+  color: oklch(0.95 0.012 245 / 0.72);
 }
 
 .plays {
@@ -1031,14 +1025,14 @@ body.in-play .ball-hint {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.9rem;
-  color: oklch(0.95 0 0 / 0.85);
+  color: oklch(0.95 0.012 245 / 0.85);
 }
 
 .play svg {
   width: 2.1rem;
   height: 2.1rem;
   fill: none;
-  stroke: oklch(0.97 0 0);
+  stroke: oklch(0.97 0.012 245);
   stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -1051,7 +1045,7 @@ body.in-play .ball-hint {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .play em {
@@ -1063,10 +1057,10 @@ body.in-play .ball-hint {
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
   border: 1px dashed oklch(1 0 0 / 0.5);
-  color: oklch(0.88 0 0);
+  color: oklch(0.9 0.03 245);
 }
 
-.play.is-hot b { text-shadow: 0 0 12px var(--accent); }
+.play.is-hot b { text-shadow: 0 0 12px var(--sky); }
 .play.is-hot svg { animation: chalk 0.6s ease; }
 
 @keyframes chalk {
@@ -1117,8 +1111,8 @@ body.in-play .ball-hint {
 
 .set--live {
   border-color: oklch(1 0 0 / 0.55);
-  background: oklch(0.14 0 0);
-  box-shadow: 0 0 0 1px oklch(1 0 0 / 0.25), 0 0 40px oklch(1 0 0 / 0.07), 0 20px 50px oklch(0.05 0 0 / 0.45);
+  background: oklch(0.22 0.075 258);
+  box-shadow: 0 0 0 1px oklch(1 0 0 / 0.25), 0 0 40px oklch(1 0 0 / 0.07), 0 20px 50px oklch(0.13 0.075 258 / 0.45);
 }
 
 .set.set--live h3 { font-size: clamp(1.9rem, 3vw, 2.9rem); }
@@ -1140,7 +1134,7 @@ body.in-play .ball-hint {
 .set-no {
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
-  background: oklch(0.06 0 0);
+  background: oklch(0.14 0.075 258);
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
@@ -1179,7 +1173,7 @@ body.in-play .ball-hint {
 .set-role {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .set-desc {
@@ -1212,7 +1206,7 @@ body.in-play .ball-hint {
   overflow: hidden;
   background: #fff;
   border: 1px solid oklch(1 0 0 / 0.14);
-  box-shadow: 0 30px 70px oklch(0.05 0 0 / 0.55);
+  box-shadow: 0 30px 70px oklch(0.13 0.075 258 / 0.55);
 }
 
 .hitter-shot img {
@@ -1222,7 +1216,7 @@ body.in-play .ball-hint {
   object-fit: contain;
 }
 
-.hitter-shot--full { background: oklch(0.12 0 0); }
+.hitter-shot--full { background: oklch(0.2 0.075 258); }
 
 .hitter-shot--full img {
   padding: 0;
@@ -1330,13 +1324,13 @@ body.in-play .ball-hint {
   letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--text);
-  background: linear-gradient(var(--accent), var(--accent)) 0 100% / 100% 4px no-repeat;
+  background: linear-gradient(var(--sky), var(--sky)) 0 100% / 100% 4px no-repeat;
   padding-bottom: 0.15rem;
   transition: color 0.2s;
   overflow-wrap: anywhere;
 }
 
-.kill-email:hover { color: var(--accent); }
+.kill-email:hover { color: var(--sky); }
 
 .kill .link-row { justify-content: center; }
 

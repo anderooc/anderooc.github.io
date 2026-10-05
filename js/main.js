@@ -256,8 +256,8 @@
     out.push(
       '<defs><linearGradient id="court-fog" gradientUnits="userSpaceOnUse" x1="0" y1="' + farEdge.toFixed(1) +
       '" x2="0" y2="' + cam.h + '">' +
-      '<stop offset="0" style="stop-color:#000;stop-opacity:0.85"/>' +
-      '<stop offset="0.5" style="stop-color:#000;stop-opacity:0"/>' +
+      '<stop offset="0" style="stop-color:#00072a;stop-opacity:0.85"/>' +
+      '<stop offset="0.5" style="stop-color:#00072a;stop-opacity:0"/>' +
       '</linearGradient></defs>'
     );
 
