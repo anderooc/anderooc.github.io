@@ -283,7 +283,6 @@ body.in-play .timeout {
   position: fixed;
   inset: var(--header-h) 0 0;
   overflow: hidden;
-  touch-action: none;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -306,6 +305,9 @@ body.in-play .timeout {
   background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.5) 20%, oklch(1 0 0 / 0.5) 80%, transparent);
   box-shadow: 0 0 40px 10px oklch(1 0 0 / 0.06);
 }
+
+/* Scenes stay out of this so iOS still lets them scroll. */
+.arena > :not(.scene) { touch-action: none; }
 
 .arena:not([data-scene="home"]) .gym { filter: brightness(0.85); }
 
@@ -777,6 +779,12 @@ body.in-play .ball-hint {
 .scene .hitter-body,
 .scene .kill {
   pointer-events: none;
+}
+
+/* When there's more to read, swipes anywhere over the text scroll instead of flicking the ball. */
+.scene.is-scrollable,
+.scene.is-scrollable * {
+  pointer-events: auto;
 }
 
 .scene-inner,

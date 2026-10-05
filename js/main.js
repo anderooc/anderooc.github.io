@@ -136,6 +136,14 @@
 
     var hash = name === 'home' ? '' : '#' + PLAYS[name].hash;
     history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+    markScrollable();
+  };
+
+  var markScrollable = function () {
+    Object.keys(scenes).forEach(function (key) {
+      var el = scenes[key];
+      el.classList.toggle('is-scrollable', !el.hidden && el.scrollHeight > el.clientHeight + 1);
+    });
   };
 
   var timeout = function () {
@@ -324,6 +332,7 @@
     hittersEl.classList.remove('is-swapping');
     void hittersEl.offsetWidth;
     hittersEl.classList.add('is-swapping');
+    markScrollable();
   };
 
   var hitterJump = function (i) {
@@ -790,7 +799,7 @@
     var onCourt = event.target === arena || !!event.target.closest('.gym') || event.target.classList.contains('scene') ||
       event.target.classList.contains('scene-inner') || event.target.classList.contains('home-grid') ||
       event.target.classList.contains('attackers');
-    if (!onBall && !onCourt) return;
+    if (!onBall && (!onCourt || event.target.closest('.scene.is-scrollable'))) return;
 
     drag = {
       id: event.pointerId,
@@ -888,7 +897,11 @@
 
   layout();
 
-  new ResizeObserver(layout).observe(arena);
+  new ResizeObserver(function () {
+    layout();
+    markScrollable();
+  }).observe(arena);
+  window.addEventListener('load', markScrollable);
 
   var fromHash = { work: 'dig', projects: 'set', contact: 'spike' }[(window.location.hash || '').slice(1)];
   if (fromHash) {
